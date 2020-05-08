@@ -3,7 +3,7 @@ from rest_framework import serializers
 from .models import CustomUser, Products, Todos
 
 
-class UserCreateSerializerImplament(UserCreateSerializer):
+class UserCreateSerializerImplement(UserCreateSerializer):
     class Meta(UserCreateSerializer.Meta):
         model = CustomUser
         fields = ('email', 'username', 'password', 'phone')
@@ -12,7 +12,7 @@ class UserCreateSerializerImplament(UserCreateSerializer):
 class UserDisplay(UserSerializer):
     class Meta(UserSerializer.Meta):
         model = CustomUser
-        fields = ('email', 'username', 'phone', 'id')
+        fields = '__all__'
 
 
 
